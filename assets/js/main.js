@@ -33,6 +33,7 @@ const app = new Vue({
       if (this.newTask.length > 2) {
         this.todos.push({ text: this.newTask, checked: false });
         this.alertStatus = false;
+        this.newTask = "";
       } else {
         this.alertStatus = true;
       }
