@@ -107,3 +107,11 @@ main #app .todo-list ul li .vg-cross {
 }
 
 /* /main */
+
+/* js special classes */
+
+.checked {
+  text-decoration: line-through;
+}
+
+/* /js special classes */

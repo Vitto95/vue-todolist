@@ -13,6 +13,8 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <title>ToDo List</title>
   </head>
   <body>
@@ -32,9 +34,15 @@
         <!-- todo list -->
         <div class="todo-list">
           <ul>
-            <li>
-              <p class="text">Item1</p>
-              <i class="fas fa-times vg-cross"></i>
+            <li v-for="(todo,index) in todos">
+              <p
+                class="text"
+                :class="todo.checked ? 'checked' : null"
+                @click="todo.checked = !todo.checked"
+              >
+                {{index+1}} {{todo.text}}
+              </p>
+              <i class="fas fa-times vg-cross" @click="removeObj(index)"></i>
             </li>
           </ul>
         </div>
