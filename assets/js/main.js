@@ -1,6 +1,7 @@
 const app = new Vue({
   el: "#app",
   data: {
+    newTask: "",
     todos: [
       {
         text: "Lavare i piatti",
@@ -23,6 +24,11 @@ const app = new Vue({
   methods: {
     removeObj(index) {
       this.todos.splice(index, 1);
+    },
+    addTask() {
+      if (this.newTask.length > 2) {
+        this.todos.push({ text: this.newTask, checked: false });
+      }
     },
   },
 });

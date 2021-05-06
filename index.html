@@ -28,8 +28,13 @@
       <div id="app" class="container">
         <!-- inputs and buttons -->
         <div class="inputs-and-buttons">
-          <input type="text" placeholder="Inserisci ToDo" />
-          <button>Aggiungi</button>
+          <input
+            type="text"
+            placeholder="Inserisci ToDo"
+            v-model="newTask"
+            @keyup.enter="addTask()"
+          />
+          <button @click="addTask()">Aggiungi</button>
         </div>
         <!-- todo list -->
         <div class="todo-list">
