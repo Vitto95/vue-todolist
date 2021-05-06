@@ -9,6 +9,8 @@
 body {
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(to bottom right, #00e165, #001533);
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -22,7 +24,7 @@ ul {
 header {
   width: 100%;
   height: 100px;
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
 }
 
 header .container-logo {
@@ -46,13 +48,14 @@ main {
   height: calc(100% - 100px);
   display: flex;
   justify-content: center;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
 main #app {
   width: 50%;
   height: 100%;
-  background-color: lightcoral;
+
+  /* background-color: lightcoral; */
 }
 
 /* inputs and buttons */
@@ -62,7 +65,7 @@ main #app .inputs-and-buttons {
   height: 100px;
   text-align: center;
   line-height: 100px;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }
 
 main #app .inputs-and-buttons p {
@@ -92,7 +95,7 @@ main #app .todo-list {
 
   display: flex;
   justify-content: center;
-  background-color: lightsalmon;
+  /* background-color: lightsalmon; */
 }
 
 main #app .todo-list ul {
