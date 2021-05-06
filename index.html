@@ -28,6 +28,7 @@
       <div id="app" class="container">
         <!-- inputs and buttons -->
         <div class="inputs-and-buttons">
+          <p :class="alertStatus ? 'active' : null">{{alertMsg}}</p>
           <input
             type="text"
             placeholder="Inserisci ToDo"

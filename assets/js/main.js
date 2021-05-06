@@ -1,6 +1,8 @@
 const app = new Vue({
   el: "#app",
   data: {
+    alertMsg: "Attenzione, stringa non valida",
+    alertStatus: false,
     newTask: "",
     todos: [
       {
@@ -23,11 +25,16 @@ const app = new Vue({
   },
   methods: {
     removeObj(index) {
-      this.todos.splice(index, 1);
+      if (this.todos[index].checked) {
+        this.todos.splice(index, 1);
+      }
     },
     addTask() {
       if (this.newTask.length > 2) {
         this.todos.push({ text: this.newTask, checked: false });
+        this.alertStatus = false;
+      } else {
+        this.alertStatus = true;
       }
     },
   },

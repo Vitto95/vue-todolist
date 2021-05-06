@@ -58,10 +58,20 @@ main #app {
 /* inputs and buttons */
 
 main #app .inputs-and-buttons {
+  position: relative;
   height: 100px;
   text-align: center;
   line-height: 100px;
   background-color: lightgreen;
+}
+
+main #app .inputs-and-buttons p {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: normal;
 }
 
 main #app .inputs-and-buttons input,
@@ -110,8 +120,16 @@ main #app .todo-list ul li .vg-cross {
 
 /* js special classes */
 
+main #app .inputs-and-buttons .active {
+  display: block;
+}
+
 .checked {
   text-decoration: line-through;
+}
+
+.red {
+  color: red;
 }
 
 /* /js special classes */
